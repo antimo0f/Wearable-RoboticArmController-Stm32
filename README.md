@@ -1,5 +1,5 @@
 # Wearable-RoboticArmController-Stm32
-Map the user's arm and hand movements, detected through inertial and flex sensors to the servomotors of a robotic arm. The system consists of two main nodes based on **STM32 Nucleo F401RE** boards that communicate wirelessly via **Bluetooth Low Energy (BLE)**.
+Map the user's arm and hand movements, detected through inertial and flex sensors, to the servomotors of a robotic arm. The system consists of two main nodes based on **STM32 Nucleo F401RE** boards that communicate wirelessly via **Bluetooth Low Energy (BLE)**.
 ![Real Setup](media/image22.png)
 
 ## System Architecture
@@ -12,7 +12,6 @@ The system is divided into two main modules:
   - **MEMS Sensors:** Accelerometer and Gyroscope (e.g., GY-521 / MPU6050 and IKS4A1 shield) connected via I2C to detect the spatial orientation of the arm (Pitch, Roll, Yaw).
   - **Flex Sensor:** Read via ADC, used to detect hand movement or finger closure (e.g., to control the robot's gripper).
 - **Communication:** Bluetooth expansion module (set as **BLE Peripheral**). Continuously sends telemetry data.
-- **Tools:** Includes a Python script `plot_mems.py` that allows real-time visualization of sensor data coming from the serial port on a graph.
 
 ### 2. Controller Node (Robotic Arm)
 
@@ -26,7 +25,7 @@ The system is divided into two main modules:
 ## Project Images
 
 ### Real Setup
-Below is the complete system in operation, with the wearable controller worn and the robotic arm waiting for commands:
+Below is the complete system in operation, with the wearable controller worn and the robotic arm.
 
 ![Real Setup](media/image21.jpeg)
 
